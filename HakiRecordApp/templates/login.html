@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HakiRecord | Login</title>
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+</head>
+<body>
+<div class="login">
+
+<form class="login_form" action="/login/" method="POST">
+    {% csrf_token %}
+        <img src="{% static 'assets/img/login_logo.png' %}" alt="" >
+
+<div class="texts">
+     <label for="">Service Number</label><br>
+    <input type="text" name="service_number" required placeholder="Enter service number"> <br><br>
+
+    <label for="">Password</label> <br>
+    <input type="password" name="login_password" required placeholder="Enter Password"> <br><br>
+
+    <button>Submit</button>
+
+</div>
+
+
+    
+</form>
+
+    
+    
+</div>
+
+
+</body>
+</html>
