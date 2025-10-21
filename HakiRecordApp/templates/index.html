@@ -35,30 +35,29 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
+<header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center">
 
       <a href="{% url 'homepage' %}" class="logo d-flex align-items-center me-auto">
-
-         <img src="{%  static 'assets/img/favicon.jpg' %}" alt="">
-        <h1 class="sitename" >HakiRecord</h1>
+          <img src="{% static 'assets/img/logo.jpg' %}" alt="">
+        <h1 class="{% url 'homepage' %}">HakiRecord</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{% url 'homepage' %}" class="active">Home</a></li>
-          <li><a href="{% url 'homepage' %}#services">Features</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-            {% if user.is_authenticated %}
+          <li><a href="{% url 'homepage' %}#services">Services</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
+             {% if user.is_authenticated %}
 
-                {% if user.is_staff %}
+          <li>
+          {% if user.is_staff %}
         <li>
           <a href="/admin/" class="btn btn-success" style="margin-left: 10px; background-color: #198754; color: white; padding: 10px 22px;">
             Admin
           </a>
         </li>
       {% endif %}
-          <li>
             <form action="{% url 'logout' %}" method="post" style="display:inline;">
               {% csrf_token %}
               <button type="submit" class="btn btn-outline-danger" style="margin-left:10px;">Logout</button>
@@ -68,8 +67,11 @@
           <li><a href="{% url 'login' %}" class="btn btn-primary" style="margin-left: 50px; background-color: #0b9edd; color: white; padding: 10px 22px;">Login</a></li>
 {#          <li><a href="{% url 'signup' %}" class="btn btn-primary" style="margin-left:5px;">Sign Up</a></li>#}
         {% endif %}
+
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+
+        <i  style="color: white;" class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
 

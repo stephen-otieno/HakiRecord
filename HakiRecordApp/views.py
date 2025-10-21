@@ -54,15 +54,18 @@ def record_statement(request):
 
 
 def login_fn(request):
-    if request.method == "POST":
-        service_number = request.POST["service_number"]
-        login_password = request.POST["login_password"]
-        user = authenticate(request,username= service_number,password=login_password)
+    if request.method == 'POST':
+        service_number = request.POST['service_number']
+        login_password = request.POST['login_password']
+        user = authenticate(request, username=service_number, password=login_password)
         if user is not None:
+            login(request, user)
             return redirect('login_success')
+
         else:
-            messages.error(request, "Invalid service number or password.")
-    return render(request, "login.html")
+            messages.error(request, 'Invalid service number or password. Please try again.')
+
+    return render(request,'login.html')
 
 
 def logout_view(request):
