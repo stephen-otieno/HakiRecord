@@ -6,9 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8fef7c80-7bb2-479d-af60-ff3e36122294" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/static/assets/img/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/static/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecord/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecord/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/static/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/static/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/static/assets/img/services.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/evidence.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/evidence.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/recent_actions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/recent_actions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/statement.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/statement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/view_statements.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/view_statements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +60,12 @@
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/SOFTWARE ENGINEERING/YR3_SEM1/SOEN370 (Project Design and Development)/project/HakiRecord/HakiRecordApp/static/assets/img&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -72,12 +85,38 @@
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static" />
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord" />
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecord" />
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static\assets\img" />
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static\assets\login_logo.png" />
-      <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static\assets\img\hero-carousel" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HakiRecord" type="Python.DjangoServer" factoryName="Django server">
+      <module name="HakiRecord" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -115,7 +154,10 @@
       <workItem from="1760510517990" duration="7596000" />
       <workItem from="1760596243476" duration="8683000" />
       <workItem from="1760682911309" duration="980000" />
-      <workItem from="1760684291733" duration="5018000" />
+      <workItem from="1760684291733" duration="7445000" />
+      <workItem from="1760873100339" duration="697000" />
+      <workItem from="1760942542962" duration="8175000" />
+      <workItem from="1761028130484" duration="5892000" />
     </task>
     <servers />
   </component>

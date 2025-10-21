@@ -1,3 +1,13 @@
+.login_error{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    color:red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
 
 .login {
     display: flex;
@@ -11,7 +21,7 @@
     height: 500px;
     background-color: #272f52;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 60px;
     border-radius: 20px;
 
 

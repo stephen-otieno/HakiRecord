@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Submitted</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background-color: #f8f9fa;
+            color: #272f52;
+            text-align: center;
+            padding: 60px;
+                    }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #272f52;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            background-color: #272f52;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Successful!</h1>
+        <p style="font-size: 20px;">Welcome to HakiRecord. Continue with case documentation or system updates.</p>
+        <a href="{% url 'statement' %}"
+     class="btn-view"
+     style="display: inline-block; background-color: #272f52; color: white; padding: 10px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px;">
+     Record Statement
+  </a>
+        <a href="{% url 'homepage' %}">Back to Home</a>
+    </div>
+
+
+
+</body>
+</html>

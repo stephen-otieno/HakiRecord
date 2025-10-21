@@ -1,6 +1,8 @@
+from django.contrib import messages
 from django.contrib.admin.models import LogEntry
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm
 # from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from  .models import *
@@ -57,11 +59,11 @@ def login_fn(request):
         login_password = request.POST["login_password"]
         user = authenticate(request,username= service_number,password=login_password)
         if user is not None:
-            login(request, user)
-        return redirect('homepage')
-
-
+            return redirect('login_success')
+        else:
+            messages.error(request, "Invalid service number or password.")
     return render(request, "login.html")
+
 
 def logout_view(request):
     logout(request)
@@ -96,4 +98,10 @@ def contact(request):
 def evidence_vault(request):
     statements = Statement.objects.all().order_by('-id')
     return render(request, 'evidence.html',{"statements": statements})
+
+def shift_allocation(request):
+    return render(request, 'shift_allocation.html')
+
+def login_success(request):
+    return render(request, 'login_success.html')
 

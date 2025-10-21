@@ -14,6 +14,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('evidence/', views.evidence_vault, name='evidence'),
 
+    path('shift/', views.shift_allocation, name='shift'),
+    path('login_success/', views.login_success, name='login_success'),
+
 ]
 
 if settings.DEBUG:
