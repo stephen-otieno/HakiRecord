@@ -1,0 +1,108 @@
+/* Container styling */
+.shift-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Grid layout for cards */
+.shift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Officer Card */
+.shift-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #dcdcdc; /* border outline */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.shift-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Officer Image */
+.officer-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #007bff;
+}
+
+/* Officer Details */
+.officer-info {
+    text-align: center;
+}
+
+.officer-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.service-number {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.shift-time {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #007bff;
+}
+
+/* ✅ Responsive Design: Mobile-Friendly Layout */
+@media (max-width: 768px) {
+    .shift-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .shift-card {
+        padding: 15px;
+    }
+
+    .officer-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .officer-name {
+        font-size: 1rem;
+    }
+
+    .shift-time, .service-number {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .shift-grid {
+        grid-template-columns: 1fr; /* One card per row on small screens */
+    }
+
+    .shift-card {
+        padding: 15px;
+    }
+}
