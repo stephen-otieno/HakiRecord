@@ -11,16 +11,19 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9i%xc*xe*z4+ipj$h*qdm(a2+3ud-8%3d%cp)o02n-crto9jg4'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -167,7 +170,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AFRICASTALKING_USERNAME = 'sandbox'
-AFRICASTALKING_API_KEY = 'atsk_6460b9a40258e4650a67eac641b7178fd156092edf38d157b5ee7d375d55036eeb92d7b1'
 
 
+# Africa's Talking credentials
+AFRICASTALKING_USERNAME = env('AFRICASTALKING_USERNAME')
+AFRICASTALKING_API_KEY = env('AFRICASTALKING_API_KEY')

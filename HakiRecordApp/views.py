@@ -4,7 +4,6 @@ from django.contrib.admin.models import LogEntry
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
-from reportlab.lib import colors
 from  .models import *
 from .sms_utils import send_sms_message
 from django.db.models import Count
@@ -15,6 +14,7 @@ from reportlab.pdfgen import canvas
 from django.http import HttpResponse
 import os
 from reportlab.lib.utils import ImageReader
+from reportlab.lib import colors
 from django.db.models import Q
 
 

@@ -7,17 +7,7 @@
     <list default="true" id="8fef7c80-7bb2-479d-af60-ff3e36122294" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HakiRecord/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecord/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/evidence.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/evidence.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/recent_actions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/recent_actions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/shift_allocation.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/shift_allocation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/statement.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/statement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/view_statements.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/view_statements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HakiRecordApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +162,7 @@
       <workItem from="1761735404474" duration="2553000" />
       <workItem from="1761807134918" duration="10035000" />
       <workItem from="1761840907915" duration="900000" />
-      <workItem from="1761893326541" duration="6075000" />
+      <workItem from="1761893326541" duration="9132000" />
     </task>
     <servers />
   </component>
