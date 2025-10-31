@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8fef7c80-7bb2-479d-af60-ff3e36122294" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecord/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecord/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakiRecordApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,7 @@
       <workItem from="1761735404474" duration="2553000" />
       <workItem from="1761807134918" duration="10035000" />
       <workItem from="1761840907915" duration="900000" />
-      <workItem from="1761893326541" duration="9132000" />
+      <workItem from="1761893326541" duration="10246000" />
     </task>
     <servers />
   </component>
