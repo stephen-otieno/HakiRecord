@@ -47,13 +47,13 @@
         <ul>
           <li><a href="{% url 'homepage' %}" >Home</a></li>
 
-<li class="dropdown"><a href="#"><span class="active">Features</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li class="dropdown"><a href="#"><span >Features</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="{% url 'statement' %}">Record Statement</a></li>
                   <li><a href="{% url 'cases' %}">View Cases</a></li>
                   <li><a href="{% url 'evidence' %}">Evidence Vault</a></li>
                   <li><a href="{% url 'recent_actions' %}">Audit Trail</a></li>
-                  <li><a href="#">Crime Analysis</a></li>
+                  <li><a href="{% url 'crime_analysis' %}">Crime Analysis</a></li>
                   <li><a href="{% url 'shift' %}">Shift Allocation</a></li>
 
                 </ul>
@@ -180,7 +180,7 @@
       <p>© <span>Copyright</span> <strong class="px-1 sitename">HakiRecord</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
 
-        Designed by <a href="https://bootstrapmade.com/">Stemiot Softwares</a>
+        Designed by <a href="https://stemiotsoftwares-r1vu.onrender.com/">Stemiot Softwares</a>
       </div>
     </div>
 

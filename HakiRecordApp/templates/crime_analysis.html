@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -7,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>HakiRecord - Digital Occurrence Book</title>
+    <title>Crime Analysis Dashboard</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -28,45 +27,48 @@
   <link href="{%  static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Main CSS File -->
+         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
   <link href="{%  static 'assets/css/main.css' %}" rel="stylesheet">
 
 
 </head>
 
-<body class="index-page">
+<body class="bg-gray-100 text-gray-800">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center">
 
       <a href="{% url 'homepage' %}" class="logo d-flex align-items-center me-auto">
-
-         <img src="{%  static 'assets/img/logo1.png' %}" alt="">
-        <h1 class="sitename" >HakiRecord</h1>
+          <img src="{% static 'assets/img/logo1.png' %}" alt="">
+        <h1 class="{% url 'homepage' %}">HakiRecord</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{% url 'homepage' %}" >Home</a></li>
-<li class="dropdown"><a href="#" class="active"><span>Features</span> <i class="bi bi-chevron-down toggle-dropdown" ></i></a>
+          <li><a href="{% url 'homepage' %}" class="active">Home</a></li>
+ <li class="dropdown"><a href="#" class="active"><span>Features</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="{% url 'statement' %}">Record Statement</a></li>
                   <li><a href="{% url 'cases' %}">View Cases</a></li>
                   <li><a href="{% url 'evidence' %}">Evidence Vault</a></li>
                   <li><a href="{% url 'recent_actions' %}">Audit Trail</a></li>
                   <li><a href="{% url 'crime_analysis' %}">Crime Analysis</a></li>
-                  <li><a href="{% url 'shift' %}" >Shift Allocation</a></li>
+                  <li><a href="{% url 'shift' %}">Shift Allocation</a></li>
 
                 </ul>
-              </li>          <li><a href="{% url 'contact' %}">Contact</a></li>
-            {% if user.is_authenticated %}
-                {% if user.is_staff %}
+        </li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+             {% if user.is_authenticated %}
+
+          <li>
+          {% if user.is_staff %}
         <li>
           <a href="/admin/" class="btn btn-success" style="margin-left: 10px; background-color: #198754; color: white; padding: 10px 22px;">
             Admin
           </a>
         </li>
       {% endif %}
-          <li>
             <form action="{% url 'logout' %}" method="post" style="display:inline;">
               {% csrf_token %}
               <button type="submit" class="btn btn-outline-danger" style="margin-left:10px;">Logout</button>
@@ -74,90 +76,39 @@
           </li>
         {% else %}
           <li><a href="{% url 'login' %}" class="btn btn-primary" style="margin-left: 50px; background-color: #0b9edd; color: white; padding: 10px 22px;">Login</a></li>
-{#          <li><a href="{% url 'signup' %}" class="btn btn-primary" style="margin-left:5px;">Sign Up</a></li>#}
         {% endif %}
+
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+
+        <i  style="color: white;" class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
 
     </div>
   </header>
 
- <main>
-    <!-- Shift Allocation Section -->
-<section id="shift-allocation" class="shift-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <h2>Shift Allocation</h2>
-      <p>Assigned police officers currently on duty</p>
+    <div class="container mx-auto py-10">
+
+        <!-- Crimes Over Time -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg mb-10">
+            <h2 class="text-xl font-bold text-center mb-4">Crimes Over Time</h2>
+            <div class="chart-container" style="position: relative; height:60vh; width:90%; margin:auto;">
+                <canvas id="crimeOverTimeChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Crimes by Type -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+            <h2 class="text-xl font-bold text-center mb-4">Crimes by Type</h2>
+            <div class="chart-container" style="position: relative; height:60vh; width:70%; margin:auto;">
+                <canvas id="crimeTypeChart"></canvas>
+            </div>
+        </div>
+
     </div>
 
-    <div class="row">
-
-      <!-- Shift Card -->
-      <div class="col-lg-4 col-md-6">
-        <div
-             style="background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-              padding: 20px;
-              text-align: center;
-              transition: all 0.3s ease;
-              margin-bottom: 30px;">
-          <img style="width: 300px; height: 250px;" src="{% static 'assets/img/officer2.jpg' %}" alt="court of arms" class="police-img">
-
-          <div class="shift-info"><br>
-            <h3 class="officer-name">Cpl. John Doe</h3>
-            <p class="service-number">Service No: <b>931400C</b></p>
-            <p style="color: blue; font-weight:bold;"  class="shift-time">6:00 AM - 12:00 PM</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="shift-card" style="background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-              padding: 20px;
-              text-align: center;
-              transition: all 0.3s ease;
-              margin-bottom: 30px;">
-
-          <img style="width: 300px; height: 250px;" src="{% static 'assets/img/images.jpg' %}" alt="Officer Photo" class="officer-img">
-          <div class="shift-info"><br>
-            <h3 class="officer-name">Sgt. Mary Wambui</h3>
-            <p class="service-number">Service No: <b>828300B</b></p>
-            <p style="color: blue; font-weight:bold;" class="shift-time">12:00 PM - 6:00 PM</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="shift-card"
-             style="background: #ffffff;
-              border-radius: 12px;
-              box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-              padding: 20px;
-              text-align: center;
-              transition: all 0.3s ease;
-              margin-bottom: 30px;">
-          <img style="width: 300px; height: 250px;" src="{% static 'assets/img/officer3.jpg' %}" alt="Officer Photo" class="officer-img">
-          <div class="shift-info"><br>
-            <h3 class="officer-name">PC David Otieno</h3>
-            <p class="service-number">Service No: <b>45210A</b>7</p>
-            <p style="color: blue; font-weight:bold;" class="shift-time">6:00 PM - 12:00 AM</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-</main>
-
-
- <footer id="footer" class="footer dark-background">
+      <footer id="footer" class="footer dark-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -233,6 +184,82 @@
   <!-- Main JS File -->
   <script src="{%  static 'assets/js/main.js' %}"></script>
 
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
+    <script>
+        // Get data from Django context
+        const crimesByDate = JSON.parse('{{ crimes_by_date|safe|escapejs }}');
+        const crimesByType = JSON.parse('{{ crimes_by_type|safe|escapejs }}');
+
+        console.log("Crimes by Date:", crimesByDate);
+        console.log("Crimes by Type:", crimesByType);
+
+        // Prepare data for crimes over time chart
+        const timeLabels = crimesByDate.map(c => c.period || c.date || c.month);
+        const timeValues = crimesByDate.map(c => c.count);
+
+        // Crimes over time (line chart)
+        const ctx1 = document.getElementById('crimeOverTimeChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: timeLabels,
+                datasets: [{
+                    label: 'Number of Crimes',
+                    data: timeValues,
+                    borderColor: 'rgba(59,130,246,0.8)',
+                    backgroundColor: 'rgba(59,130,246,0.3)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true, position: 'top' },
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Prepare data for crimes by type (pie chart)
+        // Prepare data for crimes by type (pie chart)
+const typeLabels = crimesByType.map(c => c.incident_type);
+const typeValues = crimesByType.map(c => c.count);
+
+        // Crimes by type (pie chart)
+        const ctx2 = document.getElementById('crimeTypeChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: typeLabels,
+                datasets: [{
+                    label: 'Crimes by Type',
+                    data: typeValues,
+                    backgroundColor: [
+                        'rgba(59,130,246,0.7)',
+                        'rgba(16,185,129,0.7)',
+                        'rgba(245,158,11,0.7)',
+                        'rgba(239,68,68,0.7)',
+                        'rgba(139,92,246,0.7)',
+                        'rgba(236,72,153,0.7)'
+                    ],
+                    borderColor: 'white',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+
+</body>
 </html>

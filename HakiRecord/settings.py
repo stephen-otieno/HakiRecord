@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'HakiRecordApp',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,6 +52,38 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "HakiRecord Admin",
+    "site_header": "HakiRecord Admin Dashboard",
+    "site_brand": "HakiRecord ",
+    "welcome_sign": "Welcome to HakiRecord Admin",
+    "copyright": "© 2025 HakiRecord",
+
+    # Top menu
+    "topmenu_links": [
+        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Website", "url": "/", "new_window": True},
+        {"model": "auth.User"},
+    ],
+
+    # Side Menu
+    "show_sidebar": True,
+    "navigation_expanded": True,
+
+    # Icons for models
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "yourapp.YourModel": "fas fa-database",
+    },
+
+
+    # Change theme colors
+    "theme": "slate",  # or "darkly", "flatly", "cosmo", etc.
+}
+
 
 ROOT_URLCONF = 'HakiRecord.urls'
 
@@ -133,3 +166,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AFRICASTALKING_USERNAME = 'sandbox'
+AFRICASTALKING_API_KEY = 'atsk_6460b9a40258e4650a67eac641b7178fd156092edf38d157b5ee7d375d55036eeb92d7b1'
+
+

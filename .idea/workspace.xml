@@ -6,18 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="8fef7c80-7bb2-479d-af60-ff3e36122294" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecord/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecord/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/evidence.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/evidence.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/recent_actions.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/recent_actions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/shift_allocation.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/shift_allocation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/statement.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/statement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/templates/view_statements.html" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/templates/view_statements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HakiRecordApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HakiRecordApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -55,7 +69,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/SOFTWARE ENGINEERING/YR3_SEM1/SOEN370 (Project Design and Development)/project/HakiRecord/HakiRecordApp/static/assets/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/SOFTWARE ENGINEERING/YR3_SEM1/SOEN370 (Project Design and Development)/project/HakiRecord/HakiRecordApp/static/images&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -68,6 +82,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static\images" />
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static\assets\img" />
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\templates" />
       <recent name="C:\Users\user\Desktop\SOFTWARE ENGINEERING\YR3_SEM1\SOEN370 (Project Design and Development)\project\HakiRecord\HakiRecordApp\static" />
@@ -114,6 +129,9 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="8fef7c80-7bb2-479d-af60-ff3e36122294" name="Changes" comment="" />
@@ -145,7 +163,16 @@
       <workItem from="1760684291733" duration="7445000" />
       <workItem from="1760873100339" duration="697000" />
       <workItem from="1760942542962" duration="8175000" />
-      <workItem from="1761028130484" duration="7560000" />
+      <workItem from="1761028130484" duration="12284000" />
+      <workItem from="1761050622297" duration="3060000" />
+      <workItem from="1761114796563" duration="9780000" />
+      <workItem from="1761201901632" duration="8156000" />
+      <workItem from="1761545893990" duration="4652000" />
+      <workItem from="1761673000306" duration="4364000" />
+      <workItem from="1761735404474" duration="2553000" />
+      <workItem from="1761807134918" duration="10035000" />
+      <workItem from="1761840907915" duration="900000" />
+      <workItem from="1761893326541" duration="6075000" />
     </task>
     <servers />
   </component>

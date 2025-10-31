@@ -16,6 +16,9 @@ urlpatterns = [
 
     path('shift/', views.shift_allocation, name='shift'),
     path('login_success/', views.login_success, name='login_success'),
+    path('crime-analysis/', views.crime_analysis, name='crime_analysis'),
+    path('cases/<int:pk>/', views.case_detail, name='case_detail'),
+    path('cases/<int:pk>/pdf/', views.generate_case_pdf, name='generate_case_pdf'),
 
 ]
 

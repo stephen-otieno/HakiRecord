@@ -201,11 +201,10 @@
                 </svg>
                 <i class="bi bi-calendar4-week icon"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
+              <a href="{% url 'crime_analysis' %}" class="stretched-link">
                 <h3>Crime Analysis</h3>
               </a>
               <p>Visualize crime patterns to support proactive policing and resource planning.</p>
-              <a href="#" class="stretched-link"></a>
             </div>
           </div><!-- End Service Item -->
 
@@ -259,7 +258,7 @@
             <li><a href="{% url 'homepage' %}">Home</a></li>
             <li><a href="{% url 'homepage' %}#services">Features</a></li>
             <li><a href="#">Privacy policy</a></li>
-             <li><a href="#">Crime Analysis</a></li>
+             <li><a href="{% url 'crime_analysis' %}">Crime Analysis</a></li>
 
           </ul>
         </div>
@@ -282,7 +281,7 @@
       <p>© <span>Copyright</span> <strong class="px-1 sitename">HakiRecord</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
 
-        Designed by <a href="https://bootstrapmade.com/">Stemiot Softwares</a>
+        Designed by <a href="https://stemiotsoftwares-r1vu.onrender.com/">Stemiot Softwares</a>
       </div>
     </div>
 

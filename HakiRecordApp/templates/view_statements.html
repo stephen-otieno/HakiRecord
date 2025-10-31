@@ -26,7 +26,18 @@
 
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
+    <style>
+        .case-card {
+  border-left: 4px solid #272f52;
+  transition: all 0.3s ease;
 
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+    </style>
 </head>
 <body>
  <header id="header" class="header d-flex align-items-center sticky-top">
@@ -47,7 +58,7 @@
                   <li><a href="{% url 'cases' %}">View Cases</a></li>
                   <li><a href="{% url 'evidence' %}">Evidence Vault</a></li>
                   <li><a href="{% url 'recent_actions' %}">Audit Trail</a></li>
-                  <li><a href="#">Crime Analysis</a></li>
+                  <li><a href="{% url 'crime_analysis' %}">Crime Analysis</a></li>
                   <li><a href="{% url 'shift' %}">Shift Allocation</a></li>
 
                 </ul>
@@ -61,47 +72,46 @@
     </div>
   </header>
 
-<div class="container">
-<h1>Recorded Cases</h1><br><br>
+<div class="container mt-5 ">
+    <h1 class="mb-4 d-flex justify-content-center">Recorded Cases</h1>
 
+    <!-- Search Form -->
+<form method="GET" action="{% url 'cases' %}" class="mb-4 d-flex justify-content-center">
+        <div class="input-group w-50">
+            <input type="text" name="q" class="form-control" placeholder="Search by OB number, Case type, or ID number"
+                   value="{{ query|default:'' }}">
+            <button style="background-color: #FFD700; color:white; font-weight:bold;" type="submit" class="btn ">Search</button>
+        </div>
+    </form>
 
-<table class="table table-bordered table-primary table-hover">
-    <tr>
-        <th></th>
-        <th>OB Number</th>
-        <th>Officer Service Number</th>
-        <th>Last Name</th>
-        <th>ID No.</th>
-        <th>Incident Date</th>
-        <th>Incident Type</th>
-        <th>Incident Location</th>
-        <th>Case Description</th>
-        <th>Date Recorded</th>
-
-    </tr>
-
-    {% for statement in statements %}
-    <tr>
-        <td>{{ forloop.counter }}</td>
-        <td>{{ statement.ob_number }}</td>
-         <td>{{ statement.service_no.username }}</td>
-        <td>{{ statement.last_name }}</td>
-        <td>{{ statement.id_number }}</td>
-        <td>{{ statement.incident_date }}</td>
-        <td>{{ statement.incident_type }}</td>
-        <td>{{ statement.incident_location }}</td>
-        <td>{{ statement.incident_description }}</td>
-        <td>{{ statement.recorded_at|date:"F j, Y" }}</td>
-
-    </tr>
-
-
-    {% endfor %}
-
-
-</table>
-
+    <div class="row">
+        {% for statement in statements %}
+        <div class="col-md-4 mb-4">
+            <a href="{% url 'case_detail' statement.id %}" class="text-decoration-none text-dark">
+                <div class="card shadow-sm case-card">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>OB:</strong> {{ statement.ob_number }}</h5>
+                        <p class="card-text mb-1"><strong>Date:</strong> {{ statement.incident_date }}</p>
+                        <p class="card-text"><strong>Type:</strong> {{ statement.incident_type }}</p>
+                        <p class="card-text"><strong>ID No:</strong> {{ statement.id_number }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% empty %}
+        <p>No cases found matching your search.</p>
+        {% endfor %}
     </div>
+</div>
+
+
+<style>
+.case-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+    box-shadow: 0 6px 15px #FFD700;
+}
+</style>
 
   <footer id="footer" class="footer dark-background">
 
@@ -130,7 +140,7 @@
             <li><a href="{% url 'homepage' %}">Home</a></li>
             <li><a href="{% url 'homepage' %}#services">Features</a></li>
             <li><a href="#">Privacy policy</a></li>
-             <li><a href="#">Crime Analysis</a></li>
+             <li><a href="{% url 'crime_analysis' %}">Crime Analysis</a></li>
 
           </ul>
         </div>
@@ -153,7 +163,7 @@
       <p>© <span>Copyright</span> <strong class="px-1 sitename">HakiRecord</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
 
-        Designed by <a href="https://bootstrapmade.com/">Stemiot Softwares</a>
+        Designed by <a href="https://stemiotsoftwares-r1vu.onrender.com/">Stemiot Softwares</a>
       </div>
     </div>
 
